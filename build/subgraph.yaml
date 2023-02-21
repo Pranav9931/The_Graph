@@ -1,0 +1,30 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: EmployeeManagement
+    network: goerli
+    source:
+      address: "0xE8919aD7cC93c6760b63D72F1284083236486083"
+      abi: EmployeeManagement
+      startBlock: 8532682
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AddEmployee
+        - DelEmployee
+        - Payment
+      abis:
+        - name: EmployeeManagement
+          file: EmployeeManagement/abis/EmployeeManagement.json
+      eventHandlers:
+        - event: AddEmployee(address,string,string,uint256,uint256,string,bool,uint256,string)
+          handler: handleAddEmployee
+        - event: DelEmployee(address)
+          handler: handleDelEmployee
+        - event: Payment(address,uint256)
+          handler: handlePayment
+      file: EmployeeManagement/EmployeeManagement.wasm

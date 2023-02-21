@@ -1,0 +1,8 @@
+{
+  "goerli": {
+    "EmployeeManagement": {
+      "address": "0xE8919aD7cC93c6760b63D72F1284083236486083",
+      "startBlock": 8532682
+    }
+  }
+}

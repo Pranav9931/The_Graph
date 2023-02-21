@@ -1,0 +1,32 @@
+type AddEmployee @entity(immutable: true) {
+  id: Bytes!
+  employeeAddress: Bytes! # address
+  fName: String! # string
+  lName: String! # string
+  salary: BigInt! # uint256
+  vestingPeriod: BigInt! # uint256
+  employeeAvatar: String! # string
+  isVested: Boolean! # bool
+  startTime: BigInt! # uint256
+  department: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DelEmployee @entity(immutable: true) {
+  id: Bytes!
+  employeeAddress: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Payment @entity(immutable: true) {
+  id: Bytes!
+  employeeAddress: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
