@@ -1,4 +1,4 @@
-# The_Graph_API_Implementation
+# The_Graph_API_Integration
 The Graph API Integration for ETHForAll
 
 To see the frontend Repository, click on the link below:
